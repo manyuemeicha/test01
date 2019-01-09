@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="/your-name/" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" id='sum'>提交</button>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!--<form action="/your-name/" enctype="multipart/form-data" method="post">-->
+    <!--{% csrf_token %}-->
+    <!--上传：<input type="file" name="myfile">-->
+    <!--<button type="submit" id='sum'>提交</button>-->
+    <!--{{ message }}-->
+<!--</form>-->
