@@ -19,5 +19,5 @@ from test02 import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^your-name/$', views.get_name),
+    url(r'^your-name/$', views.get_file),
 ]

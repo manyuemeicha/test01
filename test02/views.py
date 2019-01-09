@@ -4,7 +4,8 @@ import os
 from test02.forms import NameForm
 
 
-def get_name(request):
+# 用django的表单系统，后端处理文件上传的写法
+def get_file(request):
         # 如果这是一个POST请求,我们就需要处理表单数据
         if request.method == 'POST':
             # 创建一个表单实例,并且使用请求中的数据填充表单，如果包含file，需要加上request.FILES
@@ -29,7 +30,8 @@ def get_name(request):
             form = NameForm()
         return render(request, 'name.html', {'form': form})
 
-# if request.method == "GET":  # 注意GET大写
+    # 不用django的表单系统，后端处理文件上传的写法
+    #if request.method == "GET":  # 注意GET大写
     #     return render(request, "name.html",)
     # else:
     #     file = request.FILES.get("myfile", None)
